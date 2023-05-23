@@ -85,12 +85,12 @@ function make_rss_entry(series: Series): Item {
     const content = `Genres: ${series.genres.reduce((acc: string, x) => {
         if (acc == "") return x.genre;
         else return `${acc}, ${x.genre}`;
-    }, "")}</br>
-    Chapters: ${series.latest_chapter}</br>
-    Year: ${series.year}</br>
-    Rating: ${series.bayesian_rating} (${series.rating_votes} votes)</br>
-    Status: ${series.status}</br>
-    Authors: ${series.authors.reduce((acc: string, x) => `${acc} ${x.name}`, "")}</br></br>
+    }, "")}<br>
+    Chapters: ${series.latest_chapter}<br>
+    Year: ${series.year}<br>
+    Rating: ${series.bayesian_rating} (${series.rating_votes} votes)<br>
+    Status: ${series.status}<br>
+    Authors: ${series.authors.reduce((acc: string, x) => `${acc} ${x.name}`, "")}<br><br>
     ${series.description}`;
 
     return {
